@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSFC University - Events </title>
+  <link rel="icon" href="IMG/logo.jpg" type="image/x-icon">
+
+  <!-- -------- css ------ -->
+  <style>
+    /* ------------------------------------------ CSS RESET ---------------------------------------------  */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+    * {
+      margin: 0px 0px;
+      padding: 0px 0px;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ------------------------------------------ Commen tag ---------------------------------------------  */
+
+    section {
+      padding: 60px 0;
+    }
+
+    .max-width {
+      max-width: 1300px;
+      padding: 0 80px;
+      margin: auto;
+    }
+
+    .title {
+      position: relative;
+      color: #da1c1c;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 1000;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .title2 {
+      position: relative;
+      color: #111;
+      font-size: 30px;
+      font-weight: 1000;
+      margin: 10px 0px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+
+
+    /* ------------------------------------------ navbar ---------------------------------------------  */
+    nav {
+      position: sticky;
+      top: 0px;
+      display: flex;
+      height: 80px;
+      width: 100%;
+      background: #da1c1c;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 50px 0 100px;
+      flex-wrap: wrap;
+      z-index: 2;
+    }
+
+    nav .logo .logotex {
+      color: #fff;
+      margin: 10px 0px;
+      margin-left: 15px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 5px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 550;
+      padding: 8px 15px;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a.active {
+      color: #111;
+      text-shadow: 1px 1px 2px #fff;
+    }
+
+    nav ul li a:hover {
+      color: #111;
+    }
+
+
+
+    /* ------------------------------------------ header ---------------------------------------------  */
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 50px;
+    }
+
+    .header::before {
+      content: "";
+      background: url("IMG/bg01.png")no-repeat center center/cover;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 390px;
+      width: 98.9vw;
+      z-index: -1;
+      opacity: 0.7;
+    }
+
+    .headerimg {
+      padding: 10px;
+      padding-left: 17px;
+      padding-right: 18px;
+      border: 2px solid rgb(94, 94, 94);
+      box-shadow: 2px 2px 30px #111;
+      background-color: #fff;
+      border-radius: 15px;
+    }
+
+    .header img {
+      height: 100px;
+      width: 100px;
+
+    }
+
+    .header .headertex {
+      color: #da1c1c;
+      text-shadow: 3px 3px 3px #111;
+      margin-top: 10px;
+      font-size: 40px;
+      font-weight: 900;
+    }
+
+
+    form .fields {
+      display: flex;
+    }
+
+    form .field,
+    form .fields .field {
+      height: 45px;
+      width: 100%;
+      margin: 2px;
+      margin-bottom: 15px;
+    }
+
+    form .textarea {
+      height: 80px;
+      width: 100%;
+    }
+
+    form .name {
+      margin-right: 10px;
+    }
+
+    form .field input,
+    form .field select,
+    form .textarea textarea {
+      height: 100%;
+      width: 100%;
+      border: 2px solid rgb(112, 112, 112);
+      border-radius: 6px;
+      outline: none;
+      padding: 0 15px;
+      font-size: 17px;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    input[type=file]::file-selector-button {
+      height: 100%;
+      width: 60%;
+      border: 2px solid rgb(112, 112, 112);
+      background: rgb(255, 254, 253);
+      border-radius: 6px;
+      outline: none;
+      padding: 0 15px;
+      font-size: 15px;
+      margin-right: 20px;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    form .field input:focus,
+    form .field select:focus,
+    form .textarea textarea:focus,
+    input[type=file]::file-selector-button:focus {
+      border: 2px solid #da1c1c;
+
+    }
+
+    form .textarea textarea {
+      padding-top: 10px;
+      resize: none;
+    }
+
+    form .button-area {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+    }
+
+    form .button-area button {
+      color: #fff;
+      display: block;
+      padding: 10px;
+      margin-top: 15px;
+      margin: 10px;
+      outline: none;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      flex-wrap: nowrap;
+      background: #da1c1c;
+      border: 2px solid #111;
+      transition: all 0.3s ease;
+    }
+
+
+
+
+
+
+    /* footer section styling */
+    footer {
+      margin-top: 15px;
+      background: #da1c1c;
+      padding: 15px 23px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .slider img {
+      height: 65vh;
+      width: 60vw;
+      margin: auto;
+      border: 5px solid #da1c1c;
+      border-radius: 15px;
+      padding: 3px;
+    }
+  </style>
+
+  <!-- ------- HTML -------- -->
+</head>
+
+<body>
+
+
+
+
+  <!-- /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/    header     /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/     -->
+
+  <div class="header">
+    <div class="headerimg">
+      <img src="IMG/logo.jpg" alt="logo">
+    </div>
+    <div class="headertex"> GSFC University - Vadodara </div>
+    <div class="headertex"
+      style="font-size: 30px; margin-top: 2px;color: rgb(25, 37, 201); text-shadow: 2px 2px 2px #111;">EDUCATION
+      RE-ENVISIONED</div>
+
+  </div>
+
+
+  <!-- /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/    navbar     /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/     -->
+
+  <nav>
+    <div id="navbar" class="logo">
+      <div class="logotex"> GSFC University </div>
+    </div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="admission.html">Admission</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+    </ul>
+  </nav>
+
+  <!-- /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/  event img  /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/     -->
+
+
+
+  <h2 class=" title">Events Pre-view</h2>
+
+  <div class="slider">
+    <div style="display: flex;">
+      <img class="images" src="IMG/e5.jpg">
+      <img class="images" src="IMG/e8.jpg">
+      <img class="images" src="IMG/e2.png">
+      <img class="images" src="IMG/e3.jpg">
+      <img class="images" src="IMG/e6.jpg">
+      <img class="images" src="IMG/e7.jpg">
+
+    </div>
+  </div>
+
+  <!-- /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/  event form  /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/     -->
+
+
+  <section class="about-us" id="about-us">
+    <div class="max-width"">
+          <h2 class=" title">Up-coming Events Form</h2>
+      <div style="display: flex;">
+        <div class="contact-content" style="border: 5px solid #da1c1c; margin: 10px; border-radius: 25px;
+      padding: 30px; padding-top: 10px; background-color: blanchedalmond;">
+
+
+          <form action="events.html">
+            <h2 class=" title2">University Event - 2021</h2>
+            <div class="fields">
+              <div class="field">
+                <input type="text" placeholder="frist name" required>
+              </div>
+              <div class="field">
+                <input type="text" placeholder="last number" required>
+              </div>
+            </div>
+            <div class="field">
+              <input type="number" placeholder="Enrollment Number" required>
+            </div>
+            <div class="field">
+              <input type="email" placeholder=" University Email" required>
+            </div>
+            <div class="field">
+              <input type="number" placeholder="Whatapp / call number" required>
+            </div>
+
+
+            <div class="fields">
+              <div class="field">
+                <input type="radio" name="mygen" style="height: 50%;
+    width: 50%;
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 6px;
+    outline: none;
+    margin-top: 10px;
+    padding: 0px;"> Male
+              </div>
+              <div class="field">
+                <input type="radio" name="mygen" style="height: 50%;
+    width: 50%;
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 6px;
+    outline: none;
+    margin-top: 10px;
+    padding: 0px;"> Female
+              </div>
+              <div class="field">
+                <input type="radio" name="mygen" style="height: 50%;
+    width: 50%;
+    border: 2px solid rgb(112, 112, 112);
+    margin-top: 10px;
+    border-radius: 6px;
+    outline: none;
+    padding: 0px;"> Other
+              </div>
+            </div>
+
+            <div class="field">
+              <select>
+                <option value="111"> Select Your Brach </option>
+                <option value="111"> </option>
+                <option value="111">Fire & Environment, Health, Safety</option>
+                <option value="111"> Chemical Engineering</option>
+                <option value="111"> Mechanical Engineering</option>
+                <option value="111">Computer Science and Engineering </option>
+                <option value="111"> Bachelor of Science in Chemistry</option>
+                <option value="111">Bachelor of Science in BioTechnology </option>
+                <option value="111">master of Science in Chemistry </option>
+                <option value="111">Bachelor of Business Administration (BBA) </option>
+
+
+              </select>
+            </div>
+            <div style="text-align: center; font-size: 17px;">Enter Date and Time when you free </div>
+            <div class="fields">
+              <div class="field">
+                <input type="date">
+              </div>
+              <div class="field">
+                <input type="time">
+              </div>
+            </div>
+
+            <div class="button-area">
+              <button type="submit">Join Event</button>
+
+              <button type="reset">Clear All</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-content" style="border: 5px solid #da1c1c; border-radius: 25px;
+padding: 30px; padding-top: 10px; margin: 10px; background-color: blanchedalmond;">
+
+
+          <form action="events.html">
+            <h2 class=" title2">Club Event - 2021</h2>
+            <div class="fields">
+              <div class="field">
+                <input type="text" placeholder="frist name" required>
+              </div>
+              <div class="field">
+                <input type="text" placeholder="last number" required>
+              </div>
+            </div>
+            <div class="field">
+              <input type="number" placeholder="Enrollment Number" required>
+            </div>
+            <div class="field">
+              <input type="email" placeholder=" University Email" required>
+            </div>
+            <div class="field">
+              <input type="number" placeholder="Whatapp / call number" required>
+            </div>
+
+
+            <div class="fields">
+              <div class="field">
+                <input type="radio" name="mygen" style="height: 50%;
+width: 50%;
+border: 2px solid rgb(112, 112, 112);
+border-radius: 6px;
+outline: none;
+margin-top: 10px;
+padding: 0px;"> Male
+              </div>
+              <div class="field">
+                <input type="radio" name="mygen" style="height: 50%;
+width: 50%;
+border: 2px solid rgb(112, 112, 112);
+border-radius: 6px;
+outline: none;
+margin-top: 10px;
+padding: 0px;"> Female
+              </div>
+              <div class="field">
+                <input type="radio" name="mygen" style="height: 50%;
+width: 50%;
+border: 2px solid rgb(112, 112, 112);
+margin-top: 10px;
+border-radius: 6px;
+outline: none;
+padding: 0px;"> Other
+              </div>
+            </div>
+
+            <div class="field">
+              <select>
+                <option value="111"> Select Your Brach </option>
+                <option value="111"> </option>
+                <option value="111">Fire & Environment, Health, Safety</option>
+                <option value="111"> Chemical Engineering</option>
+                <option value="111"> Mechanical Engineering</option>
+                <option value="111">Computer Science and Engineering </option>
+                <option value="111"> Bachelor of Science in Chemistry</option>
+                <option value="111">Bachelor of Science in BioTechnology </option>
+                <option value="111">master of Science in Chemistry </option>
+                <option value="111">Bachelor of Business Administration (BBA) </option>
+
+
+              </select>
+            </div>
+            <div style="text-align: center; font-size: 17px;">Enter Date and Time when you free </div>
+            <div class="fields">
+              <div class="field">
+                <input type="date">
+              </div>
+              <div class="field">
+                <input type="time">
+              </div>
+            </div>
+
+            <div class="button-area">
+              <button type="submit">Join Event</button>
+
+              <button type="reset">Clear All</button>
+            </div>
+          </form>
+        </div>
+
+
+
+      </div>
+      <div style="display: flex; width: 100%; margin-top: 30px; ">
+        <div style=" background-color: rgb(222, 242, 255); margin-left: 20px;margin: auto; border: 5px solid #da1c1c; border-radius: 15px;
+    padding: 50px;width: 50%; display: flex;flex-direction: column;">
+          <div class="title2" style="margin-bottom: 10px;text-align: center;">Admission Open - 2021</div>
+          <div style="width: 100%; display: flex;">
+
+            <button type="submit" action style="color: #fff;
+        display: block;
+        width: 260px!important;
+        margin: auto;
+        margin-top: 30px;
+        outline: none;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 6px;
+        cursor: pointer;
+        flex-wrap: nowrap;
+        background: #da1c1c;
+        border: 2px solid #111;
+        transition: all 0.3s ease;"><a href="admission.html" style="text-decoration: none ; color: #fff;"> Apply
+                Now</a></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/  footer  /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/     -->
+
+
+  <!-- footer section start -->
+  <footer>
+    &copy; <span style="color: #111;font-weight: 450;"> 20BT04052 - Nishant Viroja
+    </span>&nbsp;||&nbsp;&nbsp;<span>2021 All rights reserved.</span>
+  </footer>
+
+  <!-- ---- js code ----  -->
+
+  <script>
+
+    var headerss = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("images");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      headerss++;
+      if (headerss > x.length) { headerss = 1 }
+      x[headerss - 1].style.display = "block";
+      setTimeout(carousel, 1000);
+    }
+
+  </script>
+
+</body>
+
+</html>
